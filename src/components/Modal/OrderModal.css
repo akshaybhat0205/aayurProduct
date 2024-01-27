@@ -1,0 +1,63 @@
+/* Inputs.css */
+
+.gender-select {
+  flex-shrink: 0; /* Prevent the select menu from growing */
+  width: 300px; /* Make the select menu wider */
+  margin-right: 10px;
+}
+
+.input-field {
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 8px 0px !important;
+  width: 60px;
+  font-weight: 600;
+  text-align: center;
+  background: #c082ff66;
+}
+.text-area {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px !important;
+  font-weight: 600;
+  background: #c082ff66;
+}
+.dark-mode.input-field, .dark-mode.text-area {
+  color: #fff;
+}
+
+/* Light mode styles (optional) */
+.light-mode.input-field ,.light-mode.text-area{
+  color: #000;
+}
+.btn-box {
+  display: flex;
+  align-items: center;
+}
+
+.add-btn {
+  background-color: #008000 !important ;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.remove-btn {
+  background-color: #ff0000 !important;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.remove-btn:hover,
+.add-btn:hover,
+.submit-btn:hover {
+  background-color: #2980b9;
+}

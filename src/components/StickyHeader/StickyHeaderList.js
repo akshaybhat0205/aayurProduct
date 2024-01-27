@@ -1,0 +1,55 @@
+import {
+  BestIcon,
+  BestSelectedIcon,
+  CartIcon,
+  CartSelectedIcon,
+  ChooseIcon,
+  ChooseSelectedIcon,
+  TestimonialIcon,
+  TestimonialSelectedIcon,
+  VideoIcon,
+  VideoSelectedIcon,
+} from "../../Image";
+
+export const headerList = [
+  {
+    id: 1,
+    name: "Our Proucts",
+    label: "Our Proucts",
+    value: "products",
+    icon: CartIcon,
+    selectedIcon: CartSelectedIcon,
+  },
+  {
+    id: 2,
+    name: "Our Best",
+    label: "Our Best",
+    value: "best",
+    icon: BestIcon,
+    selectedIcon: BestSelectedIcon,
+  },
+  {
+    id: 4,
+    name: "Why Choose Us",
+    label: "Why Choose Us",
+    value: "choose",
+    icon: ChooseIcon,
+    selectedIcon: ChooseSelectedIcon,
+  },
+  {
+    id: 5,
+    name: "Testimonial",
+    label: "Testimonial",
+    value: "testimonial",
+    icon: TestimonialIcon,
+    selectedIcon: TestimonialSelectedIcon,
+  },
+  {
+    id: 6,
+    name: "Videos",
+    label: "Videos",
+    value: "videos",
+    icon: VideoIcon,
+    selectedIcon: VideoSelectedIcon,
+  },
+];

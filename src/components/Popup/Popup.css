@@ -1,0 +1,50 @@
+/* Inputs.css */
+
+  .gender-select {
+    flex-shrink: 0; /* Prevent the select menu from growing */
+    width: 300px; /* Make the select menu wider */
+    margin-right: 10px;
+  }
+  
+  .input-field {
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding:8px 0px !important;
+    width: -webkit-fill-available;
+    text-align: center;
+    background: #FEA92866;
+    color: #000;
+  }
+  
+  .btn-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .add-btn {
+    background-color: #008000 !important ;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .remove-btn {
+    background-color: #FF0000 !important;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .remove-btn:hover,
+  .add-btn:hover,
+  .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  

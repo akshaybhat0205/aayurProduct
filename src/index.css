@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-theme {
+  @apply bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full;
+}
+
+.order-whatsapp button {
+  @apply bg-secondary dark:bg-primary hover:scale-105 duration-200 text-white  md:text-xl py-3 px-5  rounded-full mx-auto;
+}
+html,
+body {
+  min-height: 100vh;
+  /* overflow: hidden; */
+  /* font-family: 'Inter'; */
+  scroll-behavior: smooth;
+}
+
+

@@ -1,0 +1,41 @@
+.c-sticky-header {
+  @apply py-4;
+}
+.c-sticky-header .content-wrapper button {
+  background: #c082ff66;
+  color: #fff;
+  font-family: "FjallaOne";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
+
+.c-sticky-header .content-wrapper button.active {
+  background: #37036ce3;
+  color: white;
+  font-family: "FjallaOne";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+}
+
+
+/* .c-sticky-header .content-wrapper {
+  position: relative;
+} */
+
+.c-sticky-header .header {
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Ensure the second header stays on top */
+}
+
+.c-sticky-header.sticky {
+  position: fixed;
+  top: 9%;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
