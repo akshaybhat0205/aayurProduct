@@ -125,6 +125,7 @@ const StickyHeader = (props) => {
     singleValue: (provided) => ({
       ...provided,
       color: "#fff",
+      fontWeight:500,
       padding: "12px 20px",
     }),
   };

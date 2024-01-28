@@ -3,7 +3,9 @@ import Img1 from "../../assets/women/women.png";
 import Img2 from "../../assets/women/women2.jpg";
 import Img3 from "../../assets/women/women3.jpg";
 import Img4 from "../../assets/women/women4.jpg";
-import { FaStar } from "react-icons/fa6";
+import { FaStar, FaSunPlantWilt } from "react-icons/fa6";
+import Accordion from "../Accordian/Accordian";
+import { TbPlant2  } from "react-icons/tb";
 
 const ProductsData = [
   {
@@ -56,6 +58,7 @@ const ProductsData = [
   //   aosDelay: "800",
   // },
 ];
+const theme = localStorage.getItem("theme");
 
 const Products = ({ handleOrderPopup }) => {
   return (
@@ -89,15 +92,15 @@ const Products = ({ handleOrderPopup }) => {
                   data-aos="fade-up"
                   data-aos-delay={data.aosDelay}
                   key={data.id}
-                  className="space-y-3 rounded-xl  p-4 w-full bg-secondary/50   dark:bg-gray-800 shadow-lg shadow-secondary/50 dark:shadow-gray-900"
+                  className="space-y-3 rounded-xl  p-4 w-full bg-gradient-to-b from-primary/15   to-primary/5    dark:bg-gray-800 shadow-lg shadow-primary/20  dark:shadow-gray-900"
                 >
                   <div className="flex justify-between">
-                    <h3 className="font-semibold text-center text-white text-lg ">
+                    <h3 className="font-semibold text-center  text-lg ">
                       {data.title}
                     </h3>
                     <div className="flex items-center gap-1 text-center">
-                      <FaStar className="text-yellow-400  dark:text-yellow-400" />
-                      <span className="text-white">{data.rating}</span>
+                      <FaStar className="text-secondary   dark:text-yellow-400" />
+                      <span>{data.rating}</span>
                     </div>
                   </div>
 
@@ -106,13 +109,16 @@ const Products = ({ handleOrderPopup }) => {
                     alt=""
                     className="h-60 object-cover rounded-md"
                   />
-                  <div>
-                    <p className="text-white font-medium dark:text-white text-left md:text-xl mb-3">
-                      Ingredients:
-                    </p>
-                    <p className="text-white font-medium dark:text-white text-left text-sm md:text-base">
-                      {data.color}
-                    </p>
+                  <div className="pt-3">
+                    <Accordion
+                      active={false}
+                      icon={<TbPlant2  className="w-6 h-6" />}
+                      title="View Ingredients"
+                    >
+                      <div className="text-black dark:text-white mx-auto rounded-b-xl">
+                        <div className="">{data.color}</div>
+                      </div>
+                    </Accordion>
                   </div>
                 </div>
               )

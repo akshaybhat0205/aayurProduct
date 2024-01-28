@@ -13,6 +13,8 @@ import Popup from "./components/Popup/Popup";
 import OrderModal from "./components/Modal/OrderModal";
 import Videos from "./components/Videos/Video";
 import WhyChooseUs from "./components/Banner/WhyChooseUs";
+import ScrollToTop from "react-scroll-to-top";
+import { IoIosArrowDropupCircle } from "react-icons/io";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -36,6 +38,12 @@ const App = () => {
   const scrollToTestimonial = useRef();
   const scrollToChoose = useRef();
   const scrollToVideos = useRef();
+
+  const scrollButtonStyle = {
+    borderRadius: "25px",
+    color: "#4F3871",
+    background: "#fff",
+  };
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
       <Navbar
@@ -77,6 +85,13 @@ const App = () => {
         setOrderPopup={setOrderPopup}
         orderPopup={orderPopup}
       ></OrderModal>
+
+      <ScrollToTop
+        smooth
+        style={scrollButtonStyle}
+        component={<IoIosArrowDropupCircle className="w-24 h-24" />}
+        className="flex justify-center place-items-center"
+      ></ScrollToTop>
     </div>
   );
 };
