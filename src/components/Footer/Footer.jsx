@@ -7,6 +7,7 @@ import {
   FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 
@@ -96,7 +97,17 @@ const Footer = () => {
 
             <div>
               <div className="flex items-center gap-3 mt-6">
-                <a href="https://www.instagram.com/aayurproducts" target="blank">
+                <a
+                  aria-label="Chat on WhatsApp"
+                  href="https://wa.me/9860312696"
+                  target="blank"
+                >
+                  <FaWhatsapp className="text-3xl" />
+                </a>
+                <a
+                  href="https://www.instagram.com/aayurproducts"
+                  target="blank"
+                >
                   <FaInstagram className="text-3xl" />
                 </a>
                 <a href="#">
@@ -109,7 +120,7 @@ const Footer = () => {
               <div className="mt-6">
                 <div className="flex items-center gap-3">
                   <FaLocationArrow />
-                  <p>Noida, Uttar Pradesh</p>
+                  <p>Bengaluru, Karnataka</p>
                 </div>
                 <div className="flex items-center gap-3 mt-3">
                   <FaMobileAlt />

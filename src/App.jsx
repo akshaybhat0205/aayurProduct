@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TopProducts from "./components/TopProducts/TopProducts";
 import Banner from "./components/Banner/Banner";
-import Subscribe from "./components/Subscribe/Subscribe";
+import Subscribe from "./components/Enquiry/Enquiry";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
@@ -15,6 +15,7 @@ import Videos from "./components/Videos/Video";
 import WhyChooseUs from "./components/Banner/WhyChooseUs";
 import ScrollToTop from "react-scroll-to-top";
 import { IoIosArrowDropupCircle } from "react-icons/io";
+import Enquiry from "./components/Enquiry/Enquiry";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -54,7 +55,7 @@ const App = () => {
         scrollToChoose={scrollToChoose}
         scrollToVideos={scrollToVideos}
       />
-      <Hero handleOrderPopup={handleOrderPopup} />
+      <Hero handleOrderPopup={handleOrderPopup} scrollToTestimonial={scrollToTestimonial}/>
 
       <div ref={scrollToProucts && scrollToProucts}>
         <Products handleOrderPopup={handleOrderPopup} />
@@ -69,7 +70,6 @@ const App = () => {
         <WhyChooseUs />
       </div>
 
-      {/* <Subscribe /> */}
       <div ref={scrollToTestimonial && scrollToTestimonial}>
         <Testimonials />
       </div>
@@ -78,6 +78,7 @@ const App = () => {
         <Videos />
       </div>
 
+      <Enquiry />
       <Footer />
       <OrderModal
         show={orderPopup}

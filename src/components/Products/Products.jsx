@@ -84,7 +84,7 @@ const Products = ({ handleOrderPopup }) => {
         </div>
         {/* Body section */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-items-center gap-8 px-4 md:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-5 justify-items-center gap-8 px-4 md:px-0">
             {/* card section */}
             {ProductsData?.slice(0, window.innerWidth >= 1024 ? 5 : 3).map(
               (data) => (
@@ -92,7 +92,7 @@ const Products = ({ handleOrderPopup }) => {
                   data-aos="fade-up"
                   data-aos-delay={data.aosDelay}
                   key={data.id}
-                  className="space-y-3 rounded-xl  p-4 w-full bg-gradient-to-b from-primary/15   to-primary/5    dark:bg-gray-800 shadow-lg shadow-primary/20  dark:shadow-gray-900"
+                  className="space-y-3 rounded-xl  p-4 w-full  bg-primary dark:bg-gradient-to-b dark:from-primary/15   dark:to-primary/5    dark:bg-gray-800 shadow-lg shadow-primary/20  dark:shadow-gray-900"
                 >
                   <div className="flex justify-between">
                     <h3 className="font-semibold text-center  text-lg ">

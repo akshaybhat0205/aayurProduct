@@ -296,7 +296,6 @@ const OrderModal = (props) => {
                     <div className="order-whatsapp mx-auto my-6 text-center" >
                       <ReactWhatsapp
                         number="919860312696"
-                        s
                         message={`I would like to place an order for ${order} \nAddress: ${address}`}
                       >
                         Place Order
