@@ -23,7 +23,7 @@ const Navbar = (props) => {
           <div>
             <a href="#" className="font-bold md:text-xl sm:text-3xl flex gap-2 items-center">
               <img src={Logo} alt="Logo" className="w-10" />
-              Aayur Products
+              Parvam Products
             </a>
           </div>
 

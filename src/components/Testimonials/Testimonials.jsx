@@ -2,11 +2,13 @@ import React from "react";
 import Slider from "react-slick";
 import { femaleAvatar, maleAvatar } from "../../Image";
 import "./Testimonials.css";
+import { FaStar } from "react-icons/fa";
 const TestimonialData = [
   {
     id: 1,
     name: "Victoria",
     gender: "female",
+    rating: 5,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
     img: "https://picsum.photos/101/101",
   },
@@ -14,6 +16,7 @@ const TestimonialData = [
     id: 2,
     name: "Sunita Natya",
     gender: "female",
+    rating: 3.5,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
     img: "https://picsum.photos/102/102",
   },
@@ -21,6 +24,7 @@ const TestimonialData = [
     id: 3,
     name: "Virat Kohli",
     gender: "male",
+    rating: 4,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
     img: "https://picsum.photos/104/104",
   },
@@ -28,10 +32,21 @@ const TestimonialData = [
     id: 5,
     name: "Sachin Tendulkar",
     gender: "male",
+    rating: 4,
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
     img: "https://picsum.photos/103/103",
   },
 ];
+
+const StarRating = ({ numberOfStars }) => {
+  const starsArray = [];
+
+  for (let i = 0; i < numberOfStars; i++) {
+    starsArray.push(<FaStar key={i} className="text-yellow-500" />);
+  }
+
+  return <div className="w-full flex items-center gap-1">{starsArray}</div>;
+};
 
 const Testimonials = () => {
   var settings = {
@@ -108,6 +123,7 @@ const Testimonials = () => {
                       <h1 className="text-xl font-bold text-black/80 dark:text-white">
                         {data.name}
                       </h1>
+                      <StarRating numberOfStars={data.rating} />
                     </div>
                   </div>
                   <p className="text-black/40 text-9xl font-serif absolute top-0 right-0">

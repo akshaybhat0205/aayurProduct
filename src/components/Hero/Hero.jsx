@@ -2,6 +2,7 @@ import React from "react";
 import Image1 from "../../assets/hero/women.png";
 import Image2 from "../../assets/hero/shopping.png";
 import Image3 from "../../assets/hero/sale.png";
+import Image4 from "../../assets/hero/product.png";
 import Slider from "react-slick";
 import { femaleAvatar, maleAvatar } from "../../Image";
 import { SiWolframmathematica } from "react-icons/si";
@@ -29,6 +30,13 @@ const ImageList = [
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
+  {
+    id: 3,
+    img: Image4,
+    title: "70% off on hair",
+    description:
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
 ];
 
 const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
@@ -48,7 +56,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
   };
 
   return (
-    <div className="relative overflow-hidden  min-h-[600px] sm:min-h-[650px] bg-gradient-to-r from-[#391468] to-[#142140] flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
+    <div className="relative overflow-hidden  min-h-[600px] sm:min-h-[750px] bg-gradient-to-r from-[#391468] to-[#142140] flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
       {/* background pattern */}
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* hero section */}
@@ -56,7 +64,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
         <Slider {...settings}>
           {ImageList.map((data) => (
             <div key={data.title}>
-              <div className="grid grid-cols-1 md:grid-cols-3">
+              <div className="grid grid-cols-1 md:grid-cols-4">
                 {/* text content section */}
                 <div className="flex  text-white col-span-2 flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
                   <h1
@@ -71,7 +79,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                     data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="100"
-                    className="text-sm"
+                    className=""
                   >
                     {data.description}
                   </p>
@@ -97,7 +105,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                       data-aos="fade"
                       data-aos-duration="500"
                       data-aos-delay="300"
-                      className="text-center"
+                      // className="text-center"
                     >
                       <p
                         data-aos="fade"
@@ -105,25 +113,22 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos-delay="100"
                         className="text-xl lg:text-3xl flex items-center gap-1 text-primary/80"
                       >
-                        <span>
-                          <SiWolframmathematica className="text-primary/80 w-5 h-5" />
-                        </span>
-                        ngreents
+                        Ingredients
                       </p>
                       <p
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-md lg:text-xl text-white"
+                        className="text-md lg:text-xl text-white mt-2"
                       >
-                        100% Organc
+                        100% Organic
                       </p>
                     </div>
                     <div
                       data-aos="fade"
                       data-aos-duration="500"
                       data-aos-delay="300"
-                      className="text-center"
+                      // className="text-center"
                     >
                       <p
                         data-aos="fade"
@@ -131,16 +136,36 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos-delay="100"
                         className="text-xl lg:text-3xl flex items-center gap-1 text-primary/80"
                       >
-                        <span>
-                          <FaBottleDroplet className="text-primary/80 w-5 h-5" />
-                        </span>
                         Volume
                       </p>
                       <p
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-md lg:text-xl text-white"
+                        className="text-md lg:text-xl text-white  mt-2"
+                      >
+                        200ml
+                      </p>
+                    </div>
+                    <div
+                      data-aos="fade"
+                      data-aos-duration="500"
+                      data-aos-delay="300"
+                      // className="text-center"
+                    >
+                      <p
+                        data-aos="fade"
+                        data-aos-duration="500"
+                        data-aos-delay="100"
+                        className="text-xl lg:text-3xl flex items-center gap-1 text-primary/80"
+                      >
+                        Volume
+                      </p>
+                      <p
+                        data-aos="fade"
+                        data-aos-duration="500"
+                        data-aos-delay="100"
+                        className="text-md lg:text-xl text-white  mt-2"
                       >
                         200ml
                       </p>
@@ -148,7 +173,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                   </div>
                 </div>
                 {/* image section */}
-                <div className="order-1 sm:order-2">
+                <div className="order-1 sm:order-2 col-span-2">
                   <div
                     data-aos="zoom-in"
                     data-aos-once="true"
@@ -157,49 +182,47 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                     <img
                       src={data.img}
                       alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      className="md:w-full md:h-[550px] h-[300px]  sm:scale-105 lg:scale-120 object-contain mx-auto"
                     />
+                    <div className="flex flex-col justify-center mt-5">
+                      <p className="text-2xl mb-2 text-white font-semibold  text-center">
+                        Honest Reviews
+                      </p>
 
-                    <div className="flex -space-x-4 rtl:space-x-reverse justify-center">
-                      <img
-                        className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-white rounded-full dark:border-gray-800"
-                        src={maleAvatar}
-                        alt=""
-                      />
-                      <img
-                        className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-white rounded-full dark:border-gray-800"
-                        src={maleAvatar}
-                        alt=""
-                      />
-                      <img
-                        className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-white rounded-full dark:border-gray-800"
-                        src={femaleAvatar}
-                        alt=""
-                      />
-                      <a
-                        onClick={() =>
-                          scrollToTestimonial.current.scrollIntoView({
-                            behaviour: "smooth",
-                          })
-                        }
-                        className="flex cursor-pointer  items-center justify-center w-12 h-12 lg:w-16 lg:h-16  text-lg md:text-3xl  font-medium text-white bg-gray-800 border-2 border-white rounded-full "
-                      >
-                        +
-                      </a>
+                      <div className="bg-white inline-flex justify-center  p-1 rounded-full mx-auto">
+                        <div className="flex -space-x-7 rtl:space-x-reverse justify-center items-center ">
+                          <img
+                            className="w-12 h-12 md:w-16 md:h-16  rounded-full"
+                            src={maleAvatar}
+                            alt=""
+                          />
+                          <img
+                            className="w-12 h-12 md:w-16 md:h-16  rounded-full"
+                            src={maleAvatar}
+                            alt=""
+                          />
+                          <img
+                            className="w-12 h-12 md:w-16 md:h-16  rounded-full"
+                            src={femaleAvatar}
+                            alt=""
+                          />
+                          <a
+                            onClick={() =>
+                              scrollToTestimonial.current.scrollIntoView({
+                                behaviour: "smooth",
+                              })
+                            }
+                            className="cursor-pointer font-extrabold md:text-md px-10 text-black"
+                          >
+                            100 +
+                            <p className="text-xs  md:text-sm font-bold text-gray-600">4 star reviews</p>
+                            <p className="text-xs md:text-sm font-bold text-gray-600" >
+                              from our clients
+                            </p>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-xl my-2 text-white text-center">
-                      <span
-                        className="px-1 cursor-pointer underline font-semibold"
-                        onClick={() =>
-                          scrollToTestimonial.current.scrollIntoView({
-                            behaviour: "smooth",
-                          })
-                        }
-                      >
-                        Click
-                      </span>
-                      To read customer feedback.
-                    </p>
                   </div>
                 </div>
               </div>

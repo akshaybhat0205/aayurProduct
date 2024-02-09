@@ -66,7 +66,7 @@ const App = () => {
       </div>
 
       <div ref={scrollToChoose && scrollToChoose}>
-        {/* <Banner /> */}
+        <Banner />
         <WhyChooseUs />
       </div>
 

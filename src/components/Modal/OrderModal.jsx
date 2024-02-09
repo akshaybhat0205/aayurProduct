@@ -10,6 +10,7 @@ import "./OrderModal.css";
 const GENDER_OPTIONS = [
   { value: "male", label: "Male" },
   { value: "female", label: "Female" },
+  { value: "Platinum combo", label: "Platinum combo" },
 ];
 
 const OrderModal = (props) => {

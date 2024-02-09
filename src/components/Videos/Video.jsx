@@ -51,7 +51,7 @@ const Videos = (props) => {
             data-aos="fade-up"
             className="md:text-lg font-medium text-secondary dark:text-primary/80"
           >
-            "A Modern Muse's Hair Essentials: Redefined with Aayur Products"
+            "A Modern Muse's Hair Essentials: Redefined with Parvam Products"
           </p>
         </div>
         <div>
