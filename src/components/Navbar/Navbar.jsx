@@ -13,7 +13,7 @@ const Navbar = (props) => {
     scrollToProucts,
     scrollToTestimonial,
     scrollToChoose,
-    scrollToVideos
+    scrollToVideos,
   } = props;
   return (
     <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40">
@@ -21,9 +21,12 @@ const Navbar = (props) => {
       <div className="bg-primary/40 py-2">
         <div className="container flex justify-between items-center">
           <div>
-            <a href="#" className="font-bold md:text-xl sm:text-3xl flex gap-2 items-center">
+            <a
+              href="#"
+              className="font-bold text-xl md:text-3xl flex gap-2 items-center font-AstoriaRoman tracking-wider"
+            >
               <img src={Logo} alt="Logo" className="w-10" />
-              Parvam Products
+              <p className="mt-2">Parvam Products</p>
             </a>
           </div>
 

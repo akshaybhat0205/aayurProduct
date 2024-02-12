@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "AstoriaRoman";
+  src: url(./fonts/astoriaroman/AstoriaRoman.ttf);
+}
+
 .button-theme {
   @apply bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-1 px-4 rounded-full;
 }
@@ -12,11 +17,9 @@
 html,
 body {
   min-height: 100vh;
-  /* overflow: hidden; */
-  /* font-family: 'Inter'; */
+  /* font-family: "AstoriaRoman", sans-serif; */
   scroll-behavior: smooth;
 }
-
 
 .rotatedown {
   -ms-transform: rotate(90deg);
@@ -31,4 +34,8 @@ body {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
   transition: 0.3s;
+}
+
+.AstoriaRoman{
+    font-family: "AstoriaRoman", sans-serif !important;
 }

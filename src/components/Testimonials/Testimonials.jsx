@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { femaleAvatar, maleAvatar } from "../../Image";
 import "./Testimonials.css";
 import { FaStar } from "react-icons/fa";
+import Title from "../Title/Title";
 const TestimonialData = [
   {
     id: 1,
@@ -88,21 +89,14 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="py-16 mb-16 c-testimonial ">
+    <div className="py-12 c-testimonial ">
       <div className="container">
         {/* header section */}
-        <div className="text-center mb-10 max-w-[700px] mx-auto">
-          <h1 data-aos="fade-up" className="text-3xl  xl:text-4xl font-bold">
-            From Clients to Fans
-          </h1>
-          <p
-            data-aos="fade-up"
-            className="md:text-lg font-medium text-secondary dark:text-primary/80"
-          >
-            Locks of Love: Hear What Our Customers Have to Say About Their Hair
-            Journey!
-          </p>
-        </div>
+        <Title
+          header="Testimonials"
+          title="From Clients to Fans"
+          subtitle="Locks of Love: Hear What Our Customers Have to Say About Their Hair Journey!"
+        />
 
         {/* Testimonial cards */}
         <div data-aos="zoom-in">

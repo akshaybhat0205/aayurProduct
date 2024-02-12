@@ -5,14 +5,14 @@ import Image3 from "../../assets/hero/sale.png";
 import Image4 from "../../assets/hero/product.png";
 import Slider from "react-slick";
 import { femaleAvatar, maleAvatar } from "../../Image";
-import { SiWolframmathematica } from "react-icons/si";
-import { FaBottleDroplet } from "react-icons/fa6";
 
 const ImageList = [
   {
     id: 1,
     img: Image1,
     title: "Upto 20% off on all Men's Wear",
+    volume:"300g",
+    price:200,
     description:
       "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
@@ -20,6 +20,8 @@ const ImageList = [
     id: 2,
     img: Image2,
     title: "30% off on all Women's Wear",
+    volume:"200ml",
+    price:200,
     description:
       "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
@@ -27,13 +29,17 @@ const ImageList = [
     id: 3,
     img: Image3,
     title: "70% off on all Products Sale",
+    volume:"200ml",
+    price:200,
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
     img: Image4,
-    title: "70% off on hair",
+    title: "20% off on hair Oil",
+    volume:"200ml",
+    price:200,
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
@@ -71,7 +77,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold "
+                    className="text-3xl sm:text-6xl lg:text-7xl font-bold AstoriaRoman"
                   >
                     {data.title}
                   </h1>
@@ -144,7 +150,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos-delay="100"
                         className="text-md lg:text-xl text-white  mt-2"
                       >
-                        200ml
+                        {data.volume}
                       </p>
                     </div>
                     <div
@@ -159,7 +165,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos-delay="100"
                         className="text-xl lg:text-3xl flex items-center gap-1 text-primary/80"
                       >
-                        Volume
+                        Price
                       </p>
                       <p
                         data-aos="fade"
@@ -167,7 +173,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos-delay="100"
                         className="text-md lg:text-xl text-white  mt-2"
                       >
-                        200ml
+                       ₹ {data.price}
                       </p>
                     </div>
                   </div>
@@ -185,7 +191,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                       className="md:w-full md:h-[550px] h-[300px]  sm:scale-105 lg:scale-120 object-contain mx-auto"
                     />
                     <div className="flex flex-col justify-center mt-5">
-                      <p className="text-2xl mb-2 text-white font-semibold  text-center">
+                      <p className="md:text-2xl mb-2 text-white font-semibold  text-center">
                         Honest Reviews
                       </p>
 

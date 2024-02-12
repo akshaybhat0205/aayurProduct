@@ -5,15 +5,8 @@ import { headerList } from "./StickyHeaderList";
 import { CartIcon, CartSelectedIcon } from "../../Image";
 const StickyHeader = (props) => {
   const theme = localStorage.getItem("theme");
-  const [selectedValue, setSelectedValue] = useState({
-    id: 1,
-    name: "Our Proucts",
-    label: "Our Proucts",
-    value: "products",
-    icon: CartIcon,
-    selectedIcon: CartSelectedIcon,
-  });
-  const [activeLink, setActiveLink] = useState("products");
+  const [selectedValue, setSelectedValue] = useState();
+  const [activeLink, setActiveLink] = useState();
   const {
     scrollToBest,
     scrollToProucts,

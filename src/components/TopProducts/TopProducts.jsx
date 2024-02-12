@@ -3,6 +3,7 @@ import Img1 from "../../assets/shirt/shirt.png";
 import Img2 from "../../assets/shirt/shirt2.png";
 import Img3 from "../../assets/shirt/shirt3.png";
 import { FaStar } from "react-icons/fa";
+import Title from "../Title/Title";
 
 const ProductsData = [
   {
@@ -30,30 +31,18 @@ const ProductsData = [
 const TopProducts = ({ handleOrderPopup }) => {
   return (
     <div>
-      <div className="container py-12">
-        {/* Header section */}
-        <div className="text-center mb-24">
-          <h1 data-aos="fade-up" className="text-3xl  xl:text-4xl font-bold">
-            Prime Picks
-          </h1>
-          <p
-            data-aos="fade-up"
-            className="md:text-lg font-medium text-secondary dark:text-primary/80"
-          >
-            "Unveiling the Pinnacle of Beauty: Discover Our Top-Performing
+      <div className="container my-12">
+        <Title
+          header="Our Best"
+          title="Prime Picks"
+          subtitle="Unveiling the Pinnacle of Beauty: Discover Our Top-Performing
             Products!"
-          </p>
-
-          {/* <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
-          </p> */}
-        </div>
+        />
         {/* Body section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center py-16">
           {ProductsData.map((data) => (
             <div
-            key={data.title}
+              key={data.title}
               data-aos="zoom-in"
               className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px]"
             >

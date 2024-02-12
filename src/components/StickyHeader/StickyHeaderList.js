@@ -30,8 +30,8 @@ export const headerList = [
   },
   {
     id: 4,
-    name: "Why Choose Us",
-    label: "Why Choose Us",
+    name: "About Us",
+    label: "About Us",
     value: "choose",
     icon: ChooseIcon,
     selectedIcon: ChooseSelectedIcon,

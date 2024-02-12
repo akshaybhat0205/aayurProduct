@@ -10,6 +10,7 @@ import {
 import { RxLapTimer } from "react-icons/rx";
 import { ImLeaf } from "react-icons/im";
 import { LiaCertificateSolid } from "react-icons/lia";
+import Title from "../Title/Title";
 
 const whyChooseUsData = [
   {
@@ -43,21 +44,14 @@ const WhyChooseUs = () => {
 
   return (
     <>
-      <div className="container py-16">
-        <div className="flex items-center gap-x-4">
-          <hr
-            data-aos="fade-right"
-            data-aos-delay="200"
-            className="md:block hidden border border-b-4 border-black dark:border-white md:w-16 rounded-full"
-          ></hr>
-          <h1
-            data-aos="fade-right"
-            
-            className="text-3xl  xl:text-4xl font-bold text-center md:text-left"
-          >
-            Choosing Us Offers Varieties Of Perks
-          </h1>
-        </div>
+      <div className="container my-12">
+      <Title
+          header="Benefits"
+          title="Choosing us brings many perks."
+          
+          subtitle="Excellence Redefined: Unveiling Our Premium Line of Quality
+          Products!"
+        />
         <div className="grid md:grid-cols-3 gap-6 mt-12 place-content-center mx-auto" >
           {whyChooseUsData &&
             whyChooseUsData?.map((item) => (

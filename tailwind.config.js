@@ -8,6 +8,7 @@ export default {
         primary: "#c082ff66",
         secondary: "#37036ce3",
       },
+      fontFamily: { AstoriaRoman: ["AstoriaRoman"] },
       container: {
         center: true,
         padding: {

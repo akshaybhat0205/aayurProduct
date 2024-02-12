@@ -5,7 +5,8 @@ import Img3 from "../../assets/women/women3.jpg";
 import Img4 from "../../assets/women/women4.jpg";
 import { FaStar, FaSunPlantWilt } from "react-icons/fa6";
 import Accordion from "../Accordian/Accordian";
-import { TbPlant2  } from "react-icons/tb";
+import { TbPlant2 } from "react-icons/tb";
+import Title from "../Title/Title";
 
 const ProductsData = [
   {
@@ -62,26 +63,15 @@ const theme = localStorage.getItem("theme");
 
 const Products = ({ handleOrderPopup }) => {
   return (
-    <div className="mt-14 mb-12 md:py-12">
+    <div className="mt-14 mb-12">
       <div className="container">
-        {/* Header section */}
-        <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <h1 data-aos="fade-up" className="text-3xl  xl:text-4xl font-bold">
-            Your Problem, Our Solution
-          </h1>
-          <p
-            data-aos="fade-up"
-            className="md:text-lg font-medium text-secondary dark:text-primary/80"
-          >
-            "Excellence Redefined: Unveiling Our Premium Line of Quality
-            Products!"
-          </p>
-
-          {/* <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
-          </p> */}
-        </div>
+      <Title
+          header="Products"
+          title="Your Problem, Our Solution"
+          
+          subtitle="Excellence Redefined: Unveiling Our Premium Line of Quality
+          Products!"
+        />
         {/* Body section */}
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  xl:grid-cols-5 justify-items-center gap-8 px-4 md:px-0">
@@ -94,6 +84,11 @@ const Products = ({ handleOrderPopup }) => {
                   key={data.id}
                   className="space-y-3 rounded-xl  p-4 w-full  bg-primary dark:bg-gradient-to-b dark:from-primary/15   dark:to-primary/5    dark:bg-gray-800 shadow-lg shadow-primary/20  dark:shadow-gray-900"
                 >
+                  <img
+                    src={data.img}
+                    alt=""
+                    className="h-60 object-cover rounded-md"
+                  />
                   <div className="flex justify-between">
                     <h3 className="font-semibold text-center  text-lg ">
                       {data.title}
@@ -103,16 +98,10 @@ const Products = ({ handleOrderPopup }) => {
                       <span>{data.rating}</span>
                     </div>
                   </div>
-
-                  <img
-                    src={data.img}
-                    alt=""
-                    className="h-60 object-cover rounded-md"
-                  />
                   <div className="pt-3">
                     <Accordion
                       active={false}
-                      icon={<TbPlant2  className="w-6 h-6" />}
+                      icon={<TbPlant2 className="w-6 h-6" />}
                       title="View Ingredients"
                     >
                       <div className="text-black dark:text-white mx-auto rounded-b-xl">
