@@ -1,34 +1,48 @@
-import React from "react";
-import Img1 from "../../assets/women/women.png";
-import Img2 from "../../assets/women/women2.jpg";
-import Img3 from "../../assets/women/women3.jpg";
-import Img4 from "../../assets/women/women4.jpg";
 import { FaStar, FaSunPlantWilt } from "react-icons/fa6";
 import Accordion from "../Accordian/Accordian";
 import { TbPlant2 } from "react-icons/tb";
 import Title from "../Title/Title";
+import {
+  AayurHenna,
+  DivineRoots,
+  FamilyPack,
+  KeshAmrith,
+  TripleCombo,
+} from "../../Image";
+
+import React, { useEffect, useRef } from "react";
+
+import LightGallery from "lightgallery/react";
+
+// import styles
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
 
 const ProductsData = [
   {
     id: 1,
-    img: Img1,
-    title: "Women Ethnic",
+    img: DivineRoots,
+    title: "Divine Roots Hair Oil",
     rating: 5.0,
     color: "white",
     aosDelay: "0",
   },
   {
     id: 2,
-    img: Img2,
-    title: "Women western",
+    img: AayurHenna,
+    title: "Aayur Henna",
     rating: 4.5,
     color: "Red",
     aosDelay: "200",
   },
   {
     id: 3,
-    img: Img3,
-    title: "Goggles",
+    img: KeshAmrith,
+    title: "Kesh Amrith",
     rating: 4.7,
     color:
       "Lorem ipsum dolor sit amet, Molestias a re dignissimos officiis deserunt modi doloremque quidem, explicabo, assumenda sint suscipit. Distinctio, doloremque cumque?",
@@ -36,16 +50,16 @@ const ProductsData = [
   },
   {
     id: 7,
-    img: Img3,
-    title: "Goggles",
+    img: TripleCombo,
+    title: "Triple Combo",
     rating: 4.7,
     color:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, dicta!",
   },
   {
     id: 4,
-    img: Img4,
-    title: "Printed T-Shirt",
+    img: FamilyPack,
+    title: "Family Pack",
     rating: 4.4,
     color: "Yellow",
     aosDelay: "600",
@@ -62,13 +76,15 @@ const ProductsData = [
 const theme = localStorage.getItem("theme");
 
 const Products = ({ handleOrderPopup }) => {
+  const onInit = () => {
+    console.log('lightGallery has been initialized');
+};
   return (
     <div className="mt-14 mb-12">
       <div className="container">
-      <Title
+        <Title
           header="Products"
           title="Your Problem, Our Solution"
-          
           subtitle="Excellence Redefined: Unveiling Our Premium Line of Quality
           Products!"
         />
@@ -84,11 +100,19 @@ const Products = ({ handleOrderPopup }) => {
                   key={data.id}
                   className="space-y-3 rounded-xl  p-4 w-full  bg-primary dark:bg-gradient-to-b dark:from-primary/15   dark:to-primary/5    dark:bg-gray-800 shadow-lg shadow-primary/20  dark:shadow-gray-900"
                 >
-                  <img
-                    src={data.img}
-                    alt=""
-                    className="h-60 object-cover rounded-md"
-                  />
+                  <LightGallery
+                    onInit={onInit}
+                    speed={500}
+                    plugins={[lgThumbnail, lgZoom]}
+                  >
+                    <a href={data.img}>
+                      <img
+                        alt={data.title}
+                        src={data.img}
+                        className="h-60 w-full object-cover rounded-md"
+                      />
+                    </a>
+                  </LightGallery>
                   <div className="flex justify-between">
                     <h3 className="font-semibold text-center  text-lg ">
                       {data.title}

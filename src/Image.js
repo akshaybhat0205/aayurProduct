@@ -24,6 +24,16 @@ import DeliveryDark from "./assets/banner/delivery_dark.png";
 import Delivery from "./assets/banner/delivery.png";
 import OrganicDark from "./assets/banner/organic_dark.png";
 import Organic from "./assets/banner/organic.png";
+
+// Product Images
+import DivineRoots from "./assets/products/divine_roots.jpg"
+import AayurHenna from "./assets/products/aayur_henna.jpg"
+import KeshAmrith from "./assets/products/kesh_amrith.jpg"
+import TripleCombo from "./assets/products/triple_combo.jpg"
+import AayurHennaCombo from "./assets/products/ayur_henna_combo.jpg"
+import AayurHennaKeshAmrithCombo from "./assets/products/ayur_henna_kesh_amrith_combo.jpg"
+import FamilyPack from "./assets/products/family_pack.jpg"
+
 export {
   CartIcon,
   CartSelectedIcon,
@@ -49,4 +59,12 @@ export {
   CertifiedDark,
   TranparentImage,
   PlayIcon,
+
+  AayurHenna,
+  DivineRoots,
+  KeshAmrith,
+  AayurHennaKeshAmrithCombo,
+  AayurHennaCombo,
+  FamilyPack,
+  TripleCombo
 };

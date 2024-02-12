@@ -39,3 +39,8 @@ body {
 .AstoriaRoman{
     font-family: "AstoriaRoman", sans-serif !important;
 }
+
+.react-fancybox .thumbnail img {
+  max-width: -webkit-fill-available;
+}
+
