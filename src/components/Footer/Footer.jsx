@@ -10,6 +10,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
+import { ParvamLogo } from "../../Image";
 
 const BannerImg = {
   backgroundImage: `url(${Banner})`,
@@ -47,7 +48,7 @@ const Footer = () => {
           {/* company details */}
           <div className="py-8 px-4 col-span-2">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={footerLogo} alt="" className="max-w-[50px]" />
+              {/* <img src={ParvamLogo} alt="" className="max-w-[50px]" /> */}
               Parvam Products
             </h1>
             {/* <p className="max-w-lg">

@@ -1,3 +1,5 @@
+import ParvamLogo from "./assets/products/parvam_logo.png"
+import ParvamPurpleLogo from "./assets/products/parvam_purple_logo.png"
 import CartIcon from "./assets/HeaderIcons/cart.png";
 import CartSelectedIcon from "./assets/HeaderIcons/cart_selected.png";
 import BestIcon from "./assets/HeaderIcons/best.png";
@@ -41,6 +43,8 @@ import BestKeshAmrith from "./assets/products/best_kesh_amrith.png"
 import HomeKeshAmrith from "./assets/products/home_kesh_amrith.png"
 
 export {
+  ParvamPurpleLogo,
+  ParvamLogo,
   CartIcon,
   CartSelectedIcon,
   BestIcon,

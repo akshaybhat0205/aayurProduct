@@ -5,6 +5,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
 import StickyHeader from "../StickyHeader/StickyHeader";
+import { ParvamLogo } from "../../Image";
 
 const Navbar = (props) => {
   const {
@@ -25,7 +26,7 @@ const Navbar = (props) => {
               href="#"
               className="font-bold text-xl md:text-3xl flex gap-2 items-center font-AstoriaRoman tracking-wider"
             >
-              <img src={Logo} alt="Logo" className="w-10" />
+              <img src={ParvamLogo} alt="Logo" className="w-10" />
               <p className="mt-2">Parvam Products</p>
             </a>
           </div>

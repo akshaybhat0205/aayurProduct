@@ -203,6 +203,7 @@ const Products = ({ handleOrderPopup }) => {
                   onInit={onInit}
                   speed={500}
                   plugins={[lgThumbnail, lgZoom]}
+                  closeOnTap={true}
                 >
                   <a href={data.img}>
                     <img
