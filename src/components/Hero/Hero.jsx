@@ -4,12 +4,12 @@ import Image2 from "../../assets/hero/shopping.png";
 import Image3 from "../../assets/hero/sale.png";
 import Image4 from "../../assets/hero/product.png";
 import Slider from "react-slick";
-import { femaleAvatar, maleAvatar } from "../../Image";
+import { HomeAayurhenna, HomeDivineRoots, HomeKeshAmrith, femaleAvatar, maleAvatar } from "../../Image";
 
 const ImageList = [
   {
     id: 1,
-    img: Image1,
+    img: HomeAayurhenna,
     title: "Upto 20% off on all Men's Wear",
     volume:"300g",
     price:200,
@@ -18,7 +18,7 @@ const ImageList = [
   },
   {
     id: 2,
-    img: Image2,
+    img: HomeKeshAmrith,
     title: "30% off on all Women's Wear",
     volume:"200ml",
     price:200,
@@ -27,16 +27,7 @@ const ImageList = [
   },
   {
     id: 3,
-    img: Image3,
-    title: "70% off on all Products Sale",
-    volume:"200ml",
-    price:200,
-    description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 3,
-    img: Image4,
+    img: HomeDivineRoots,
     title: "20% off on hair Oil",
     volume:"200ml",
     price:200,
@@ -62,7 +53,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
   };
 
   return (
-    <div className="relative overflow-hidden  min-h-[600px] sm:min-h-[750px] bg-gradient-to-r from-[#391468] to-[#142140] flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
+    <div className="relative overflow-hidden  min-h-[600px] bg-gradient-to-r from-[#391468] to-[#142140] flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
       {/* background pattern */}
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* hero section */}
@@ -72,12 +63,12 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
             <div key={data.title}>
               <div className="grid grid-cols-1 md:grid-cols-4">
                 {/* text content section */}
-                <div className="flex  text-white col-span-2 flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
+                <div className="flex  text-white col-span-2 flex-col justify-center gap-4 pt-6 md:pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
                   <h1
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
-                    className="text-3xl sm:text-6xl lg:text-7xl font-bold AstoriaRoman"
+                    className="text-4xl sm:text-6xl lg:text-7xl font-bold AstoriaRoman"
                   >
                     {data.title}
                   </h1>
@@ -96,7 +87,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                   >
                     <button
                       onClick={handleOrderPopup}
-                      className="bg-primary  dark:bg-primary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      className="bg-primary  dark:bg-primary hover:scale-105 duration-200 text-white md:ml-2 py-2 px-4 rounded-full"
                     >
                       Order Now
                     </button>
@@ -188,9 +179,9 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                     <img
                       src={data.img}
                       alt=""
-                      className="md:w-full md:h-[550px] h-[300px]  sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      className="md:w-full md:h-[400px] h-[250px]  sm:scale-105 lg:scale-120 object-contain mx-auto"
                     />
-                    <div className="flex flex-col justify-center mt-5">
+                    <div className="hidden md:flex flex-col justify-center mt-5">
                       <p className="md:text-2xl mb-2 text-white font-semibold  text-center">
                         Honest Reviews
                       </p>

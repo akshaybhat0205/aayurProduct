@@ -33,6 +33,12 @@ import TripleCombo from "./assets/products/triple_combo.jpg"
 import AayurHennaCombo from "./assets/products/ayur_henna_combo.jpg"
 import AayurHennaKeshAmrithCombo from "./assets/products/ayur_henna_kesh_amrith_combo.jpg"
 import FamilyPack from "./assets/products/family_pack.jpg"
+import BestDivineRoots from "./assets/products/best_divine_roots.png"
+import HomeDivineRoots from "./assets/products/home_divine_roots.png"
+import BestAayurhenna from "./assets/products/best_henna.png"
+import HomeAayurhenna from "./assets/products/home_henna.png"
+import BestKeshAmrith from "./assets/products/best_kesh_amrith.png"
+import HomeKeshAmrith from "./assets/products/home_kesh_amrith.png"
 
 export {
   CartIcon,
@@ -66,5 +72,11 @@ export {
   AayurHennaKeshAmrithCombo,
   AayurHennaCombo,
   FamilyPack,
-  TripleCombo
+  TripleCombo,
+  BestAayurhenna,
+  BestDivineRoots,
+  BestKeshAmrith,
+  HomeAayurhenna,
+  HomeKeshAmrith,
+  HomeDivineRoots
 };

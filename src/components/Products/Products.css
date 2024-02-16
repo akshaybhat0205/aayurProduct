@@ -1,0 +1,11 @@
+.c-products .slick-slider .slick-dots li button:before {
+    width: 12px;
+    height: 12px;
+    content: "";
+    border-radius: 50%;
+    @apply opacity-100;
+    background-color: #cdd5f7;
+  }
+  .c-products .slick-dots li.slick-active button:before {
+    @apply opacity-100 bg-primary;
+  }
