@@ -4,35 +4,46 @@ import Image2 from "../../assets/hero/shopping.png";
 import Image3 from "../../assets/hero/sale.png";
 import Image4 from "../../assets/hero/product.png";
 import Slider from "react-slick";
-import { HomeAayurhenna, HomeDivineRoots, HomeKeshAmrith, femaleAvatar, maleAvatar } from "../../Image";
+import {
+  HomeAayurhenna,
+  HomeDivineRoots,
+  HomeKeshAmrith,
+  IngredientsIcon,
+  VolumeIcon,
+  femaleAvatar,
+  maleAvatar,
+} from "../../Image";
 
 const ImageList = [
   {
     id: 1,
     img: HomeAayurhenna,
-    title: "Upto 20% off on all Men's Wear",
-    volume:"300g",
-    price:200,
+    title: "Aayur Henna",
+    type: "Hair Color",
+    volume: "Starting from 150g",
+    price: 200,
     description:
-      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Consists of henna powder, hibiscus leaf, beetroot, amla, bhringraj",
   },
   {
     id: 2,
     img: HomeKeshAmrith,
-    title: "30% off on all Women's Wear",
-    volume:"200ml",
-    price:200,
+    title: "Kesh Amrith",
+    type: "Hair Mask",
+    volume: "Starting from 150g",
+    price: 200,
     description:
-      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Consists of aloe vera, fenugreek powder, hibiscus leaf, beetroot, amla, bhringraj",
   },
   {
     id: 3,
     img: HomeDivineRoots,
-    title: "20% off on hair Oil",
-    volume:"200ml",
-    price:200,
+    title: "Divine Roots",
+    type: "Hair Oil",
+    volume: "200ml",
+    price: 200,
     description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Consists of coconut oil, fenugreek seeds, amla, castor oil, tulsi leaves, flax seeds, small onion, camphor, curry leaves",
   },
 ];
 
@@ -63,20 +74,28 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
             <div key={data.title}>
               <div className="grid grid-cols-1 md:grid-cols-4">
                 {/* text content section */}
-                <div className="flex  text-white col-span-2 flex-col justify-center gap-4 pt-6 md:pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
+                <div className="flex  text-white col-span-2 flex-col justify-center gap-4 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
                   <h1
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
-                    className="text-4xl sm:text-6xl lg:text-7xl font-bold AstoriaRoman"
+                    className="text-4xl tracking-wider sm:text-5xl lg:text-7xl font-bold AstoriaRoman"
                   >
                     {data.title}
                   </h1>
+                  <h2
+                    data-aos="zoom-out"
+                    data-aos-duration="500"
+                    data-aos-once="true"
+                    className="text-3xl sm:text-4xl lg:text-5xl font-bold AstoriaRoman"
+                  >
+                    {data.type}
+                  </h2>
                   <p
                     data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="100"
-                    className=""
+                    className="text-xl"
                   >
                     {data.description}
                   </p>
@@ -87,7 +106,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                   >
                     <button
                       onClick={handleOrderPopup}
-                      className="bg-primary  dark:bg-primary hover:scale-105 duration-200 text-white md:ml-2 py-2 px-4 rounded-full"
+                      className="bg-primary  dark:bg-primary hover:scale-105 duration-200 text-white  py-2 px-4 rounded-full"
                     >
                       Order Now
                     </button>
@@ -104,11 +123,16 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                       data-aos-delay="300"
                       // className="text-center"
                     >
+                      <img
+                        src={IngredientsIcon}
+                        className="w-12 h-12 mb-2 mx-auto"
+                        alt="icon"
+                      />
                       <p
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-xl lg:text-3xl flex items-center gap-1 text-primary/80"
+                        className="text-lg lg:text-2xl  text-center gap-1 "
                       >
                         Ingredients
                       </p>
@@ -116,7 +140,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-md lg:text-xl text-white mt-2"
+                        className="text-md lg:text-xl text-center text-primary/80 mt-1"
                       >
                         100% Organic
                       </p>
@@ -127,11 +151,16 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                       data-aos-delay="300"
                       // className="text-center"
                     >
+                      <img
+                        src={VolumeIcon}
+                        className="w-14 h-14 mb-2 mx-auto"
+                        alt="icon"
+                      />
                       <p
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-xl lg:text-3xl flex items-center gap-1 text-primary/80"
+                        className="text-lg lg:text-2xl text-center gap-1 "
                       >
                         Volume
                       </p>
@@ -139,12 +168,12 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-md lg:text-xl text-white  mt-2"
+                        className="text-md lg:text-xl text-center text-primary/80 mt-1"
                       >
                         {data.volume}
                       </p>
                     </div>
-                    <div
+                    {/* <div
                       data-aos="fade"
                       data-aos-duration="500"
                       data-aos-delay="300"
@@ -164,9 +193,9 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos-delay="100"
                         className="text-md lg:text-xl text-white  mt-2"
                       >
-                       ₹ {data.price}
+                        ₹ {data.price}
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 {/* image section */}
@@ -212,8 +241,10 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                             className="cursor-pointer font-extrabold md:text-md px-10 text-black"
                           >
                             100 +
-                            <p className="text-xs  md:text-sm font-bold text-gray-600">4 star reviews</p>
-                            <p className="text-xs md:text-sm font-bold text-gray-600" >
+                            <p className="text-xs  md:text-sm font-bold text-gray-600">
+                              4 star reviews
+                            </p>
+                            <p className="text-xs md:text-sm font-bold text-gray-600">
                               from our clients
                             </p>
                           </a>

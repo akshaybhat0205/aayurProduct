@@ -83,47 +83,6 @@ const ProductsData = [
     color: "Yellow",
     aosDelay: "600",
   },
-  {
-    id: 1,
-    img: DivineRoots,
-    title: "Divine Roots Hair Oil",
-    rating: 5.0,
-    color: "white",
-    aosDelay: "0",
-  },
-  {
-    id: 2,
-    img: AayurHenna,
-    title: "Aayur Henna",
-    rating: 4.5,
-    color: "Red",
-    aosDelay: "200",
-  },
-  {
-    id: 3,
-    img: KeshAmrith,
-    title: "Kesh Amrith",
-    rating: 4.7,
-    color:
-      "Lorem ipsum dolor sit amet, Molestias a re dignissimos officiis deserunt modi doloremque quidem, explicabo, assumenda sint suscipit. Distinctio, doloremque cumque?",
-    aosDelay: "400",
-  },
-  {
-    id: 7,
-    img: TripleCombo,
-    title: "Triple Combo",
-    rating: 4.7,
-    color:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, dicta!",
-  },
-  {
-    id: 4,
-    img: FamilyPack,
-    title: "Family Pack",
-    rating: 4.4,
-    color: "Yellow",
-    aosDelay: "600",
-  },
 ];
 
 var settings = {

@@ -15,6 +15,9 @@ import femaleAvatar from "./assets/female_avatar.png";
 import TranparentImage from "./assets/transparent_image.png";
 import PlayIcon from "./assets/play_icon.svg";
 
+import IngredientsIcon from "./assets/hero/ingredients.png"
+import VolumeIcon from "./assets/hero/volume.png"
+
 // BannerImages
 import HairOil from "./assets/banner/hair_oil.jpg";
 import LongHairs from "./assets/banner/long_hairs.jpg";
@@ -69,6 +72,8 @@ export {
   CertifiedDark,
   TranparentImage,
   PlayIcon,
+  IngredientsIcon,
+  VolumeIcon,
 
   AayurHenna,
   DivineRoots,

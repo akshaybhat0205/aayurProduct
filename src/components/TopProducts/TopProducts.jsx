@@ -10,23 +10,23 @@ const ProductsData = [
   {
     id: 1,
     img: BestDivineRoots,
-    title: "Casual Wear",
+    title: "Divine Roots",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Embrace Lustrous Locks with Our Luxe Hair Oil Elixir",
   },
   {
     id: 2,
     img: BestAayurhenna,
-    title: "Printed shirt",
+    title: "Aayur Henna",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Redefine Your Look with Our Stunning Hair Colors",
   },
   {
     id: 3,
     img: BestKeshAmrith,
-    title: "Women shirt",
+    title: "Kesh Amrith",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Our Hair Mask, Your Instant Transformation",
   },
 ];
 const TopProducts = ({ handleOrderPopup }) => {

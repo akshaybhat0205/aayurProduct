@@ -64,7 +64,7 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
 
   const [order, setOrder] = useState();
   const [error, setError] = useState(false);
-  const [inputList, setInputList] = useState([{ firstName: "1", gender: "" }]);
+  const [inputList, setInputList] = useState([{ productCount: "1", gender: "" }]);
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
@@ -81,9 +81,9 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
 
   const handleAddClick = () => {
     const lastItem = inputList[inputList.length - 1];
-    if (lastItem.firstName.trim() !== "" && lastItem.gender.trim() !== "") {
+    if (lastItem.productCount.trim() !== "" && lastItem.gender.trim() !== "") {
       setError(false);
-      setInputList((prevList) => [...prevList, { firstName: "1", gender: "" }]);
+      setInputList((prevList) => [...prevList, { productCount: "1", gender: "" }]);
     } else {
       setError(true);
     }
@@ -92,7 +92,7 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
   useEffect(() => {
     const hasEmptySelect = inputList.some(({ gender }) => gender.trim() === "");
     const nonEmptyItems = inputList.filter(
-      ({ firstName, gender }) => firstName.trim() !== "" && gender.trim() !== ""
+      ({ productCount, gender }) => productCount.trim() !== "" && gender.trim() !== ""
     );
 
     if (hasEmptySelect || nonEmptyItems.length === 0) {
@@ -101,7 +101,7 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
     }
 
     const formattedData = nonEmptyItems
-      .map(({ firstName = "N/A", gender = "N/A" }) => `${firstName}:${gender}`)
+      .map(({ productCount = "N/A", gender = "N/A" }) => `${productCount}:${gender}`)
       .join(" , ");
     setOrder(formattedData);
   }, [inputList]);
@@ -157,10 +157,10 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
                     <div className="col-span-3 ">
                       <p className="px-2 pb-1 font-medium">Count</p>
                       <input
-                        name="firstName"
+                        name="productCount"
                         className="input-field"
                         placeholder="Add Count"
-                        value={item.firstName}
+                        value={item.productCount}
                         type="text" // Change type to text
                         inputMode="numeric" // Add inputMode attribute
                         pattern="[0-9]*" // Add pattern attribute to allow only numeric input

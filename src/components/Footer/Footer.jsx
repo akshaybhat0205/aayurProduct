@@ -48,7 +48,7 @@ const Footer = () => {
           {/* company details */}
           <div className="py-8 px-4 col-span-2">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              {/* <img src={ParvamLogo} alt="" className="max-w-[50px]" /> */}
+              <img src={ParvamLogo} alt="" className="max-w-[40px]" />
               Parvam Products
             </h1>
             {/* <p className="max-w-lg">

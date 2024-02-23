@@ -7,10 +7,10 @@ import Title from "../Title/Title";
 const TestimonialData = [
   {
     id: 1,
-    name: "Victoria",
+    name: "Raaga",
     gender: "female",
     rating: 5,
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    text: "Hello Siri,The hair oil is truly working wonders.. I'm seeing new baby hairs grow. Thank you very much.. I'll be ordering two more bottles",
     img: "https://picsum.photos/101/101",
   },
   {

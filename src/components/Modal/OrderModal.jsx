@@ -7,10 +7,10 @@ import Select from "react-select";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import "./OrderModal.css";
 
-const GENDER_OPTIONS = [
-  { value: "male", label: "Male" },
-  { value: "female", label: "Female" },
-  { value: "Platinum combo", label: "Platinum combo" },
+const product_OPTIONS = [
+  { value: "male", label: "Male", price: 20 },
+  { value: "female", label: "Female", price: 10 },
+  { value: "Platinum combo", label: "Platinum combo", price: 30 },
 ];
 
 const OrderModal = (props) => {
@@ -38,8 +38,12 @@ const OrderModal = (props) => {
   }, [selectedOption]);
 
   function getData(data) {
-    const stringValue = data?.map((item) => item.value)?.join(", ");
-    setOrderData(stringValue);
+    const updatedOptions = data?.map((item) => ({
+      ...item,
+      price: item.price,
+      label: undefined
+    }));
+    setOrderData(updatedOptions);
   }
 
   const theme = localStorage.getItem("theme");
@@ -81,48 +85,50 @@ const OrderModal = (props) => {
 
   const [order, setOrder] = useState();
   const [error, setError] = useState(false);
-  const [inputList, setInputList] = useState([{ firstName: "1", gender: "" }]);
+  const [inputList, setInputList] = useState([{ productCount: "1", product: "", price: 0 }]);
+
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
+    const selectedProduct = product_OPTIONS.find((option) => option.value === value);
+  
     setInputList((prevList) =>
       prevList.map((item, i) =>
-        i === index ? { ...item, [name]: value } : item
+        i === index
+          ? { ...item, [name]: value, price: selectedProduct?.price || item.price }
+          : item
       )
     );
     setError(false);
   };
-
-  const handleRemoveClick = (index) =>
-    setInputList((prevList) => prevList.filter((_, i) => i !== index));
+  const handleRemoveClick = (index) => setInputList((prevList) => prevList.filter((_, i) => i !== index));
 
   const handleAddClick = () => {
     const lastItem = inputList[inputList.length - 1];
-    if (lastItem.firstName.trim() !== "" && lastItem.gender.trim() !== "") {
+    if (lastItem.productCount.trim() !== "" && lastItem.product.trim() !== "") {
       setError(false);
-      setInputList((prevList) => [...prevList, { firstName: "1", gender: "" }]);
+      setInputList((prevList) => [...prevList, { productCount: "1", product: "", price: 0 }]);
     } else {
       setError(true);
     }
-  };
+  }
 
   useEffect(() => {
-    const hasEmptySelect = inputList.some(({ gender }) => gender.trim() === "");
-    const nonEmptyItems = inputList.filter(
-      ({ firstName, gender }) => firstName.trim() !== "" && gender.trim() !== ""
-    );
+    getData(selectedOption);
+  }, [selectedOption]);
+  useEffect(() => {
+    const hasEmptySelect = inputList.some(({ product }) => product.trim() === "");
+    const nonEmptyItems = inputList.filter(({ productCount, product }) => productCount.trim() !== "" && product.trim() !== "");
 
     if (hasEmptySelect || nonEmptyItems.length === 0) {
       setTimeout(() => setError(false), 5000);
       return;
     }
-
-    const formattedData = nonEmptyItems
-      .map(({ firstName = "N/A", gender = "N/A" }) => `${firstName} ${gender}`)
-      .join(" , ");
+    const formattedData = nonEmptyItems.map(({ productCount, product }) => `${productCount} ${product}`).join(", ");
     setOrder(formattedData);
   }, [inputList]);
 
+  console.log("inputList",inputList);
   return (
     <Transition.Root show={show} as={Fragment}>
       <Dialog
@@ -207,19 +213,20 @@ const OrderModal = (props) => {
                         >
                           <div className="col-span-7">
                             <Select
-                              name={`gender-${index}`}
-                              value={GENDER_OPTIONS.find(
-                                (option) => option.value === item.gender
+                              name={`product-${index}`}
+                              value={product_OPTIONS.find(
+                                (option) => option.value === item.product
                               )}
-                              options={GENDER_OPTIONS}
+                              options={product_OPTIONS}
                               styles={customStyles}
                               placeholder="Select Product"
                               onChange={(selectedOption) =>
                                 handleInputChange(
                                   {
                                     target: {
-                                      name: "gender",
+                                      name: "product",
                                       value: selectedOption.value,
+                                      price:selectedOption.price,
                                     },
                                   },
                                   index
@@ -229,12 +236,12 @@ const OrderModal = (props) => {
                           </div>
                           <div className="col-span-3">
                             <input
-                              name="firstName"
+                              name="productCount"
                               className={`input-field ${
                                 theme === "dark" ? "dark-mode" : "light-mode"
                               }`}
                               placeholder="Count"
-                              value={item.firstName}
+                              value={item.productCount}
                               type="text" // Change type to text
                               inputMode="numeric" // Add inputMode attribute
                               pattern="[0-9]*" // Add pattern attribute to allow only numeric input
@@ -281,7 +288,7 @@ const OrderModal = (props) => {
                     </>
 
                     <p className="px-2 mt-10 mb-2 font-medium text-left text-lg">
-                     Add Address
+                      Add Address
                     </p>
                     <textarea
                       name="address"
@@ -294,7 +301,7 @@ const OrderModal = (props) => {
                       onChange={(e) => setAddress(e.target.value)}
                     />
 
-                    <div className="order-whatsapp mx-auto my-6 text-center" >
+                    <div className="order-whatsapp mx-auto my-6 text-center">
                       <ReactWhatsapp
                         number="919860312696"
                         message={`I would like to place an order for ${order} \nAddress: ${address}`}

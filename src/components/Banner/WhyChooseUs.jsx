@@ -19,7 +19,8 @@ const whyChooseUsData = [
       <LiaCertificateSolid className=" h-16 w-16  2xl:h-20 2xl:w-20 shadow-sm p-4 rounded-full bg-gradient-to-b from-primary/15   to-primary/0  mx-auto" />
     ),
     aosDelay: "600",
-    description: "description 1",
+    description:
+      "Precision-crafted for sublime results, our top-quality formula transforms hair with nourishing excellence.",
   },
   {
     title: "100% Organic",
@@ -27,7 +28,8 @@ const whyChooseUsData = [
       <ImLeaf className=" h-16 w-16  2xl:h-20 2xl:w-20 shadow-sm p-4 rounded-full bg-gradient-to-b from-primary/15   to-primary/0  mx-auto" />
     ),
     aosDelay: "700",
-    description: "description 2",
+    description:
+      "Pure & Natural - Our 100% organic formula provides wholesome care without synthetic additives for a truly enriching beauty experience.",
   },
   {
     title: "Fast Delivery",
@@ -35,7 +37,8 @@ const whyChooseUsData = [
       <RxLapTimer className=" h-16 w-16  2xl:h-20 2xl:w-20 shadow-sm p-4 rounded-full  bg-gradient-to-b from-primary/15   to-primary/0  mx-auto" />
     ),
     aosDelay: "800",
-    description: "description 3",
+    description:
+      "Swift Solutions, Speedy Styles: Delivering Beauty at Your Doorstep, Fast!",
   },
 ];
 
@@ -45,14 +48,13 @@ const WhyChooseUs = () => {
   return (
     <>
       <div className="container my-12">
-      <Title
+        <Title
           header="Benefits"
           title="Choosing us brings many perks."
-          
           subtitle="Excellence Redefined: Unveiling Our Premium Line of Quality
           Products!"
         />
-        <div className="grid md:grid-cols-3 gap-6 mt-12 place-content-center mx-auto" >
+        <div className="grid md:grid-cols-3 gap-6 mt-12 place-content-center mx-auto">
           {whyChooseUsData &&
             whyChooseUsData?.map((item) => (
               <div
