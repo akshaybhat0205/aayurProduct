@@ -100,7 +100,7 @@ const Footer = () => {
               <div className="flex items-center gap-3 mt-6">
                 <a
                   aria-label="Chat on WhatsApp"
-                  href="https://wa.me/9860312696"
+                  href="https://wa.me/7204330876"
                   target="blank"
                 >
                   <FaWhatsapp className="text-3xl" />
@@ -114,7 +114,7 @@ const Footer = () => {
                 <a href="#">
                   <FaFacebook className="text-3xl" />
                 </a>
-                <a href="#">
+                <a href="https://www.youtube.com/@ParvamProducts" target="blank">
                   <FaYoutube className="text-3xl" />
                 </a>
               </div>
@@ -125,7 +125,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-3 mt-3">
                   <FaMobileAlt />
-                  <p>+91 123456789</p>
+                  <p>+91 7204330876</p>
                 </div>
               </div>
             </div>

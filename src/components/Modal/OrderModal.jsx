@@ -8,9 +8,17 @@ import { FiPlus, FiMinus } from "react-icons/fi";
 import "./OrderModal.css";
 
 const product_OPTIONS = [
-  { value: "male", label: "Male", price: 20 },
-  { value: "female", label: "Female", price: 10 },
-  { value: "Platinum combo", label: "Platinum combo", price: 30 },
+  { value: "Divine Roots", label: "Divine Roots", price: 30 },
+  { value: "Aayur Henna 250g", label: "Aayur Henna 250g", price: 30 },
+  { value: "Henna Combo 500", label: "Henna Combo 500", price: 30 },
+  { value: "Henna Combo 1000", label: "Henna Combo 1000", price: 30 },
+  { value: "Aayur Henna 150g", label: "Aayur Henna 150g", price: 30 },
+  { value: "Aayur Combo 01", label: "Aayur Combo 01", price: 30 },
+  { value: "Kesh Amrith", label: "Kesh Amrith", price: 30 },
+  { value: "Kesh Amrith Combo 2X", label: "Kesh Amrith Combo 2X", price: 30 },
+  { value: "Parvam Combo 02", label: "Parvam Combo 02", price: 30 },
+  { value: "Parvam Combo 03", label: "Parvam Combo 03", price: 30 },
+  { value: "Parvam Divine Care", label: "Parvam Divine Care", price: 30 },
 ];
 
 const OrderModal = (props) => {
@@ -303,7 +311,7 @@ const OrderModal = (props) => {
 
                     <div className="order-whatsapp mx-auto my-6 text-center">
                       <ReactWhatsapp
-                        number="919860312696"
+                        number="917204330876"
                         message={`I would like to place an order for ${order} \nAddress: ${address}`}
                       >
                         Place Order

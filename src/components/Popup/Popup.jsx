@@ -208,7 +208,7 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
 
               <div className="order-whatsapp mx-auto py-4 text-center">
                 <ReactWhatsapp
-                  number="919860312696"s
+                  number="917204330876"
                   message={`I would like to place an order for ${order}`}
                 >
                   Place Order

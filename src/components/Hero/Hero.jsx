@@ -56,7 +56,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
     fade: true,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 10000,
+    autoplaySpeed: 6000,
     transition: 2000,
     cssEase: "ease-in-out",
     pauseOnHover: false,
@@ -140,7 +140,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-md lg:text-xl text-center text-primary/80 mt-1"
+                        className="text-md lg:text-xl text-center text-primary/80 mt-1 AstoriaRoman"
                       >
                         100% Organic
                       </p>
@@ -168,7 +168,7 @@ const Hero = ({ handleOrderPopup, scrollToTestimonial }) => {
                         data-aos="fade"
                         data-aos-duration="500"
                         data-aos-delay="100"
-                        className="text-md lg:text-xl text-center text-primary/80 mt-1"
+                        className="text-md lg:text-xl text-center text-primary/80 mt-1 AstoriaRoman"
                       >
                         {data.volume}
                       </p>

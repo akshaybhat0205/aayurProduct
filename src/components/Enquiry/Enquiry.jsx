@@ -37,7 +37,7 @@ const Enquiry = () => {
             className="text-xl font-medium  bg-secondary dark:bg-primary hover:scale-105 duration-200 text-white  md:text-xl py-3 px-5  rounded-full mx-auto;
 "
           >
-            <ReactWhatsapp number="919860312696" message={message}>
+            <ReactWhatsapp number="917204330876" message={message}>
               Send
             </ReactWhatsapp>
           </div>
