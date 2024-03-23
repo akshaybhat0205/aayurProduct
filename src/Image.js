@@ -49,7 +49,7 @@ import BestKeshAmrith from "./assets/products/best_kesh_amrith.png";
 import HomeKeshAmrith from "./assets/products/home_kesh_amrith.png";
 
 import MakingAayurHenna from "./assets/website/makingAayurHenna.png"
-import MakingKeshAmrith from "./assets/website/makingKeshAmrith.png"
+import MakingKeshAmrith from "./assets/website/makingkeshAmrith.png"
 
 
 
