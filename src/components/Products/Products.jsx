@@ -226,7 +226,7 @@ const Products = ({ handleOrderPopup }) => {
                     <span>{data.rating}</span>
                   </div>
                 </div>
-                <h3 className="font-medium text-gray-300   text-sm">
+                <h3 className="font-medium dark:text-gray-300 text-black  text-sm">
                   {data.description}
                 </h3>
               </div>
