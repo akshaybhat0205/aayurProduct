@@ -2,10 +2,15 @@ import { FaStar } from "react-icons/fa6";
 import Title from "../Title/Title";
 import {
   AayurHenna,
+  Combo01,
+  Combo02,
+  Combo03,
+  Combo1000,
+  Combo500,
+  DivineCare,
   DivineRoots,
-  FamilyPack,
   KeshAmrith,
-  TripleCombo,
+  KeshAmrithCombo,
 } from "../../Image";
 import "./Products.css";
 
@@ -47,7 +52,7 @@ const ProductsData = [
     img: DivineRoots,
     title: "Divine Roots Hair Oil",
     rating: 5.0,
-    color: "white",
+    description: "A bottle of 200ml Divine Roots Hair Oil",
     aosDelay: "0",
   },
   {
@@ -55,7 +60,7 @@ const ProductsData = [
     img: AayurHenna,
     title: "Aayur Henna",
     rating: 4.5,
-    color: "Red",
+    description: "A 250g Pack of Aayur Henna Hair Color",
     aosDelay: "200",
   },
   {
@@ -63,25 +68,65 @@ const ProductsData = [
     img: KeshAmrith,
     title: "Kesh Amrith",
     rating: 4.7,
-    color:
-      "Lorem ipsum dolor sit amet, Molestias a re dignissimos officiis deserunt modi doloremque quidem, explicabo, assumenda sint suscipit. Distinctio, doloremque cumque?",
+    description: "A 150g Pack of Kesh Amrith Hair Mask",
+    aosDelay: "400",
+  },
+  {
+    id: 6,
+    img: Combo01,
+    title: "Parvam Combo 01",
+    rating: 4.7,
+    description: "250g + 150g Pack of Aayur Henna Hair Color",
     aosDelay: "400",
   },
   {
     id: 7,
-    img: TripleCombo,
-    title: "Triple Combo",
+    img: Combo02,
+    title: "Parvam Combo 02",
     rating: 4.7,
-    color:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, dicta!",
+    description: "250g Aayur Henna + 150g Kesh Amrith",
+    aosDelay: "400",
+  },
+  {
+    id: 8,
+    img: Combo03,
+    title: "Parvam Combo 03",
+    rating: 4.7,
+    description: "150g Aayur Henna + 150g Kesh Amrith",
+    aosDelay: "400",
   },
   {
     id: 4,
-    img: FamilyPack,
-    title: "Family Pack",
-    rating: 4.4,
-    color: "Yellow",
+    img: Combo500,
+    title: "Henna Combo 500",
+    rating: 4.7,
+    description: "2 Packs of 250g Aayur Henna Hair Color",
+    aosDelay: "500",
+  },
+  {
+    id: 5,
+    img: Combo1000,
+    title: "Henna Combo 1000",
+    rating: 4.7,
+    description: "4 Packs of 250g Aayur Henna Hair Color",
     aosDelay: "600",
+  },
+
+  {
+    id: 8,
+    img: KeshAmrithCombo,
+    title: "Kesh Amrith Combo",
+    rating: 4.7,
+    description: "2 Packs of 150g Kesh Amrith Hair Mask",
+    aosDelay: "400",
+  },
+  {
+    id: 8,
+    img: DivineCare,
+    title: "Divine Care",
+    rating: 4.7,
+    description: "2 Bottles of 200ml Divine Roots Hair Oil",
+    aosDelay: "400",
   },
 ];
 
@@ -181,6 +226,9 @@ const Products = ({ handleOrderPopup }) => {
                     <span>{data.rating}</span>
                   </div>
                 </div>
+                <h3 className="font-medium text-gray-300   text-sm">
+                  {data.description}
+                </h3>
               </div>
             </div>
           ))}

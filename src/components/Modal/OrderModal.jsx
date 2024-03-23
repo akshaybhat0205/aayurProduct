@@ -9,15 +9,15 @@ import "./OrderModal.css";
 
 const product_OPTIONS = [
   { value: "Divine Roots", label: "Divine Roots", price: 30 },
-  { value: "Aayur Henna 250g", label: "Aayur Henna 250g", price: 30 },
+  { value: "Kesh Amrith", label: "Kesh Amrith", price: 30 },
+  { value: "Aayur Henna 250g", label: "Aayur Henna", price: 30 },
+  { value: "Aayur Combo 01", label: "Parvam Combo 01", price: 30 },
+  { value: "Parvam Combo 02", label: "Parvam Combo 02", price: 30 },
+  { value: "Parvam Combo 03", label: "Parvam Combo 03", price: 30 },
   { value: "Henna Combo 500", label: "Henna Combo 500", price: 30 },
   { value: "Henna Combo 1000", label: "Henna Combo 1000", price: 30 },
   { value: "Aayur Henna 150g", label: "Aayur Henna 150g", price: 30 },
-  { value: "Aayur Combo 01", label: "Aayur Combo 01", price: 30 },
-  { value: "Kesh Amrith", label: "Kesh Amrith", price: 30 },
   { value: "Kesh Amrith Combo 2X", label: "Kesh Amrith Combo 2X", price: 30 },
-  { value: "Parvam Combo 02", label: "Parvam Combo 02", price: 30 },
-  { value: "Parvam Combo 03", label: "Parvam Combo 03", price: 30 },
   { value: "Parvam Divine Care", label: "Parvam Divine Care", price: 30 },
 ];
 
@@ -49,7 +49,7 @@ const OrderModal = (props) => {
     const updatedOptions = data?.map((item) => ({
       ...item,
       price: item.price,
-      label: undefined
+      label: undefined,
     }));
     setOrderData(updatedOptions);
   }
@@ -93,50 +93,68 @@ const OrderModal = (props) => {
 
   const [order, setOrder] = useState();
   const [error, setError] = useState(false);
-  const [inputList, setInputList] = useState([{ productCount: "1", product: "", price: 0 }]);
-
+  const [inputList, setInputList] = useState([
+    { productCount: "1", product: "", price: 0 },
+  ]);
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
-    const selectedProduct = product_OPTIONS.find((option) => option.value === value);
-  
+    const selectedProduct = product_OPTIONS.find(
+      (option) => option.value === value
+    );
+
     setInputList((prevList) =>
       prevList.map((item, i) =>
         i === index
-          ? { ...item, [name]: value, price: selectedProduct?.price || item.price }
+          ? {
+              ...item,
+              [name]: value,
+              price: selectedProduct?.price || item.price,
+            }
           : item
       )
     );
     setError(false);
   };
-  const handleRemoveClick = (index) => setInputList((prevList) => prevList.filter((_, i) => i !== index));
+  const handleRemoveClick = (index) =>
+    setInputList((prevList) => prevList.filter((_, i) => i !== index));
 
   const handleAddClick = () => {
     const lastItem = inputList[inputList.length - 1];
     if (lastItem.productCount.trim() !== "" && lastItem.product.trim() !== "") {
       setError(false);
-      setInputList((prevList) => [...prevList, { productCount: "1", product: "", price: 0 }]);
+      setInputList((prevList) => [
+        ...prevList,
+        { productCount: "1", product: "", price: 0 },
+      ]);
     } else {
       setError(true);
     }
-  }
+  };
 
   useEffect(() => {
     getData(selectedOption);
   }, [selectedOption]);
   useEffect(() => {
-    const hasEmptySelect = inputList.some(({ product }) => product.trim() === "");
-    const nonEmptyItems = inputList.filter(({ productCount, product }) => productCount.trim() !== "" && product.trim() !== "");
+    const hasEmptySelect = inputList.some(
+      ({ product }) => product.trim() === ""
+    );
+    const nonEmptyItems = inputList.filter(
+      ({ productCount, product }) =>
+        productCount.trim() !== "" && product.trim() !== ""
+    );
 
     if (hasEmptySelect || nonEmptyItems.length === 0) {
       setTimeout(() => setError(false), 5000);
       return;
     }
-    const formattedData = nonEmptyItems.map(({ productCount, product }) => `${productCount} ${product}`).join(", ");
+    const formattedData = nonEmptyItems
+      .map(({ productCount, product }) => `${productCount} ${product}`)
+      .join(", ");
     setOrder(formattedData);
   }, [inputList]);
 
-  console.log("inputList",inputList);
+  console.log("inputList", inputList);
   return (
     <Transition.Root show={show} as={Fragment}>
       <Dialog
@@ -234,7 +252,7 @@ const OrderModal = (props) => {
                                     target: {
                                       name: "product",
                                       value: selectedOption.value,
-                                      price:selectedOption.price,
+                                      price: selectedOption.price,
                                     },
                                   },
                                   index

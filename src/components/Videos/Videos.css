@@ -36,9 +36,10 @@
   @apply absolute;
   @apply flex;
   @apply items-center;
-  @apply justify-evenly;
+  @apply justify-start;
   @apply w-full;
-  bottom: 8%;
+  @apply pl-2;
+  bottom: 12%;
 }
 .exclusive-video-modal .video-modal-icon {
   @apply h-6;
@@ -93,7 +94,8 @@
   .c-exclusive-videos-parent
     .video-card-container
     .exclusive-video-button-container {
-    bottom: 10%;
+    bottom: 12%;
+    @apply pl-4;
   }
   .c-exclusive-videos-parent .video-card-container .video-title {
     width: calc(100% - 155px);

@@ -16,8 +16,6 @@ const VideoCard = (props) => {
   function onClickPlayButton() {
     setShowExclusiveVideoModal(true);
   }
-
-  let dynamicVideoId = "qFxrK1RPwIs";
   return (
     <>
       {/* exclusive video card start */}
@@ -31,12 +29,12 @@ const VideoCard = (props) => {
           <div className="exclusive-video-button-container">
             <button onClick={onClickPlayButton} className="cursor-pointer">
               <img
-                className="w-10 h-10 md:w-12 md:h-12 text-white"
+                className="w-7 h-7 md:w-9 md:h-9 text-red"
                 src={PlayIcon}
                 alt="play_icon"
               />
             </button>
-            <p className="text-xl video-title text-white font-medium leading-6">
+            <p className="pl-2 text-md 2xl:text-xl video-title font-AstoriaRoman text-purple-900  font-medium leading-6">
               {videoData.video_title}
             </p>
           </div>
@@ -61,7 +59,7 @@ const VideoCard = (props) => {
           />
           <iframe
             width="100%"
-            src={`https://www.youtube.com/embed/${dynamicVideoId}?autoplay=1&mute=1`}
+            src={`https://www.youtube.com/embed/${videoData.id}?autoplay=1&mute=1`}
             title="YouTube video player"
             className="absolute top-0 w-full right-0 left-0 h-full"
             frameBorder="0"

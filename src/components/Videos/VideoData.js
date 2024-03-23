@@ -1,25 +1,15 @@
-import { Henna } from "../../Image";
+import { Henna, MakingAayurHenna, MakingKeshAmrith } from "../../Image";
 import Banner from "../../assets/website/orange-pattern.jpg";
 const exclusiveVideoContentData = [
   {
-    id: "qFxrK1RPwIs",
-    video_title: "Hair Oil",
-    thumbnail:Banner ,
+    id: "7WP_UQqWuNA",
+    video_title: "Making of Aayur Henna",
+    thumbnail:MakingAayurHenna ,
   },
   {
-    id: "qFxrK1RPwIs",
-    video_title: "Hair Mask",
-    thumbnail: Banner,
-  },
-  {
-    id: "qFxrK1RPwIs",
-    video_title: "Henna",
-    thumbnail: Banner,
-  },
-  {
-    id: "qFxrK1RPwIs",
-    video_title: "Long Hairs",
-    thumbnail: Banner,
+    id: "stwHP_IP93M",
+    video_title: "Making of Kesh Amrith",
+    thumbnail: MakingKeshAmrith,
   },
 ];
 export default exclusiveVideoContentData;
